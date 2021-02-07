@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "diffEditor.wordWrap": "on",
+    "liveServer.settings.port": 5501
+}
