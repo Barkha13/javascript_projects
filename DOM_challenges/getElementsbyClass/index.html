@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+            }
+            h1 {
+                color: brown;
+            }
+            button {
+                cursor: pointer;
+                background-color: brown;
+                color: white;
+                width: 300px;
+                padding: 1em;
+                margin: 0.5rem;
+            }
+        </style>
+        <title>DOM Access</title>
+    </head>
+    <body>
+        <h1>Test Yourself</h1>
+        <h2>getElementsByClassName()</h2>
+        <div>
+            <button onclick="green()" class="green undo">Click to change this to green.</button>
+            <button onclick="blue()" class="blue undo">Click to change this to blue.</button>
+            <button onclick="red()" class="red undo">Click to change this to red.</button>
+            <button onclick="undo()">Undo</button>
+        </div>
+        <script>
+            function green() {
+                let greenBtn = document.getElementsByClassName('green');
+                greenBtn[0].style.backgroundColor = "green";
+            }
+
+            function blue() {
+                let blueBtn = document.getElementsByClassName('blue');
+                blueBtn[0].style.backgroundColor = "blue";
+            }
+
+            function red() {
+                let redBtn = document.getElementsByClassName('red');
+                redBtn[0].style.backgroundColor = "red";
+            }
+
+            function undo() {
+                let btns = document.getElementsByClassName('undo');
+                for (let i = 0; i < btns.length; i++){
+                    btns[i].style.backgroundColor = 'brown';
+                }
+                
+            }
+        </script>
+    </body>
+</html>
