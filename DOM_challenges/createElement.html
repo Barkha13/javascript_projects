@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamically Create List Items</title>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            font-size: 72px;
+            color: #CCC;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 10px;
+        }
+
+        li {
+            background-color: rgb(0, 255, 115);
+            max-width: 300px;
+            font-family: sans-serif;
+            list-style-type: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cool animals</h1>
+    <ul></ul>
+
+    <script>
+        let animals = ["Dog", "Cat", "Warthog",
+            "Eagle", "Elephant", "Giraffe", "Lion"
+        ];
+
+        /*
+          Add each animal name from the animals array 
+          as a list item under the ul tag! 
+        */
+
+        let ulEle = document.querySelector('ul');
+        for (const animal of animals) {
+            let liEle = document.createElement('li');
+            liEle.textContent = animal;
+            ulEle.appendChild(liEle);
+        }
+     
+    </script>
+</body>
+
+</html>
