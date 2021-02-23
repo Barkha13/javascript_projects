@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Node</title>
+</head>
+<body>
+    <h1>Clone Node Practice</h1>
+    <p>This tag will be cloned.</p>
+    <script>
+        let paraEle = document.querySelector('p');
+        let bodyEle = document.querySelector('body');
+
+        function clone() {
+            let clonedPara = paraEle.cloneNode(true);
+            bodyEle.appendChild(clonedPara);
+        }
+
+        setInterval(clone, 1000);
+    </script>
+
+</body>
+</html>
