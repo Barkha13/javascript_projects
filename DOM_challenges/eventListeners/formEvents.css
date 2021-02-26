@@ -1,0 +1,61 @@
+.cool-form {
+    width: 70%;
+    background: rgb(171, 146, 199);
+    padding: 2em 1em 1em 2em;
+    border: 5px solid rgb(132, 101, 139);
+    margin: auto;
+}
+
+.cool-form input[type=text],
+.cool-form label {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.cool-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cool-form label>span {
+    width: 150px;
+    float: left;
+}
+
+.cool-form input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed rgb(121, 54, 138);
+    outline: none;
+    width: 300px;
+    font-style: italic;
+}
+
+.cool-form input[type=text]:focus {
+    border-bottom: 1px dashed rgb(217, 255, 169);
+}
+
+.cool-form input[type=submit] {
+    font-family: Calibri;
+    font-size: 1em;
+    margin-top: 1em;
+    background: rgb(150, 120, 184);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px 8px 10px;
+    color: rgb(202, 210, 221);
+    outline: none;
+}
+
+.cool-form input[type=submit]:hover {
+    background: rgb(110, 88, 134);
+}
+
+#output {
+    padding-top: 1em;
+    border-top: 1px solid rgba(110, 88, 134, 0.445);
+    font-family: calibri;
+    width: 50%;
+    font-size: 1em;
+    color: #fff;
+}
