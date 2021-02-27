@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mustache {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/personFace.jpg" alt="personFace image" id = "person" width="300px">
+    <img src="images/mustache.png" alt="mustache image" id = "mustache" width="200px">
+</body>
+<script>
+    let person = document.getElementById('person');
+
+    let onPersonClick = (e) => {
+        let mustache = document.getElementById('mustache');
+        // grab event object and yus eit to figure out mouse position
+        // We subtract some px from top and left. since mustache has size of 200 X 108. So in order to place the mustache right where we click, we subtract half px for both height and width.
+        mustache.style.top = `${e.clientY - 54}px`;
+        mustache.style.left = `${e.clientX - 100}px`;
+    }
+    // Attach click event to the person image
+    person.addEventListener('click', onPersonClick);
+
+</script>
+</html>
