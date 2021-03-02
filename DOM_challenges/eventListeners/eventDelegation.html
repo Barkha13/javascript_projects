@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Event Delegation Challenge</title>
+     <style>
+         #delegation_table td{
+            width: 150px;
+            height: 100px;
+            text-align: center;
+            background-color: #999;
+        }
+
+        #delegation_table td.highlight {
+            background-color: red;
+        }
+     </style>
+ </head>
+ <body>
+     <table id="delegation_table">
+         <th colspan="3"><em>Delegation Table: Click to change Color</em></th>
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr><tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+     </table>
+     <script>
+         let selectedEle = null;
+         let table = document.getElementById('delegation_table');
+        //  ATtach an event listener
+         table.addEventListener('click', changeColor);
+
+         function changeColor(e) {
+             let target = e.target;
+             if (target.tagName == "TD"){
+                highlight(target);
+             }
+         }
+
+         function highlight(node) {
+            //  Getting rid of the previously selected TD element highlight class.
+             if (selectedEle != null) {
+                 selectedEle.classList.remove('highlight');
+             }
+            //  Assign the new TD element we have clicked on to the selectedEle variable.
+            selectedEle = node;
+            selectedEle.classList.add('highlight');
+         }
+     </script>
+ </body>
+ </html>
