@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Challenge</title>
+    <link rel="stylesheet" href="quoteChallenge.css">
+</head>
+<body>
+    <div id="delegation">
+        <div class="box">
+            <h3>Read at your own Risk</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repudiandae quam sequi nihil quasi perferendis iste molestiae eius asperiores beatae consequatur, magnam ipsa hic, autem ratione debitis quae deserunt. Ducimus?</p>
+            <button class="remove">[x]</button>
+        </div>
+        <div class="box">
+            <h3>Are you still reading!!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore porro voluptate eaque hic, officiis, ullam aperiam unde sunt, praesentium perspiciatis doloribus ducimus delectus dignissimos voluptas! Vel magnam veritatis deleniti.</p>
+            <button class="remove">[x]</button>
+        </div>
+        <div class="box">
+            <h3>Still here!!!!!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim aut vitae cumque fuga provident facere laboriosam. Repudiandae est consequatur corporis, natus debitis consequuntur culpa. Nam dolor minima at ratione.</p>
+            <button class="remove">[x]</button>
+        </div>
+    </div>
+    <script>
+        let mainDiv = document.getElementById('delegation');
+
+        mainDiv.addEventListener('click', remove);
+
+        function remove(e) {
+            let target = e.target;
+            if(target.className == 'remove') {
+                target.parentElement.remove();
+            }
+        }
+        // This is also correct way but not performane efficient. The above way is event delegation way.
+        // let remove = document.querySelectorAll('.remove');
+        // for (let button of remove){
+        //     button.addEventListener('click', (e) => {
+        //         e.target.parentElement.remove();
+        //     });
+    // }
+    </script>
+</body>
+</html>
